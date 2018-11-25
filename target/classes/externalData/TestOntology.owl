@@ -1,0 +1,41 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:Restaurant="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#ContextDependentSentimentMention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Positive">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentValue"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericNegativeSentiment">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Negative"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AspectMention"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Enjoy">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    <Restaurant:synset>enjoy#verb1</Restaurant:synset>
+    <Restaurant:lex>savour</Restaurant:lex>
+    <Restaurant:lex>savor</Restaurant:lex>
+    <Restaurant:lex>relish</Restaurant:lex>
+    <Restaurant:lex>bask</Restaurant:lex>
+    <Restaurant:lex>enjoy</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Negative">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentValue"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericPositiveSentiment">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Positive"/>
+  </owl:Class>
+</rdf:RDF>

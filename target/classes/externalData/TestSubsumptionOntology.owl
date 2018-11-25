@@ -1,0 +1,696 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServiceMention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#EntityMention"/>
+    </rdfs:subClassOf>
+    <aspect>SERVICE#GENERAL</aspect>
+    <synset>service#noun#15</synset>
+    <lex>service</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#AmbiencePropertyMention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PropertyMention"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#AmbienceMention"/>
+    </rdfs:subClassOf>
+    <synset>ambience#noun#1</synset>
+    <lex>ambience</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenancePropertyMention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PropertyMention"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenanceMention"/>
+    </rdfs:subClassOf>
+    <synset>sustenance#noun#1</synset>
+    <lex>sustenance</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#AmbienceMention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#EntityMention"/>
+    </rdfs:subClassOf>
+    <aspect>AMBIENCE#GENERAL</aspect>
+    <synset>ambience#noun#1</synset>
+    <lex>ambience</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Style&amp;optionsNegativeProperty">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Style&amp;optionsPropertyMention"/>
+    </rdfs:subClassOf>
+    <lex>style&amp;options</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenanceNegativeEntity">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenanceMention"/>
+    </rdfs:subClassOf>
+    <synset>sustenance#noun#1</synset>
+    <lex>sustenance</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PricesPositiveEntity">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PricesMention"/>
+    </rdfs:subClassOf>
+    <lex>prices</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationPositiveEntity">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationMention"/>
+    </rdfs:subClassOf>
+    <synset>location#noun#1</synset>
+    <lex>location</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Dislike">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#GenericNegativeActionMention"/>
+    <synset>dislike#verb#1</synset>
+    <lex>dislike</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PricesMention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#EntityMention"/>
+    </rdfs:subClassOf>
+    <aspect>RESTAURANT#PRICES</aspect>
+    <aspect>SUSTENANCE#PRICES</aspect>
+    <lex>prices</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Sentiment"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <owl:intersectionOf rdf:parseType="Collection">
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Enjoy"/>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationMention"/>
+    </owl:intersectionOf>
+  </owl:Class>
+  <owl:Class>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    </rdfs:subClassOf>
+    <owl:intersectionOf rdf:parseType="Collection">
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Leave"/>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationMention"/>
+    </owl:intersectionOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ActionMention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Mention"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Love">
+    <lex>enjoy</lex>
+    <lex>dearest</lex>
+    <lex>do it</lex>
+    <lex>lovemaking</lex>
+    <synset>love#verb#3</synset>
+    <lex>making love</lex>
+    <lex>sexual love</lex>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationPositiveAction"/>
+    </rdfs:subClassOf>
+    <lex>sleep with</lex>
+    <lex>fuck</lex>
+    <lex>be intimate</lex>
+    <lex>erotic love</lex>
+    <lex>love</lex>
+    <lex>bang</lex>
+    <lex>honey</lex>
+    <lex>get laid</lex>
+    <lex>make love</lex>
+    <lex>screw</lex>
+    <lex>hump</lex>
+    <lex>make out</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Leave">
+    <lex>depart</lex>
+    <lex>go forth</lex>
+    <lex>pull up stakes</lex>
+    <lex>allow</lex>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServicePositiveAction"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationPositiveAction"/>
+    </rdfs:subClassOf>
+    <lex>give</lex>
+    <lex>lead</lex>
+    <lex>leave behind</lex>
+    <lex>leave of absence</lex>
+    <lex>pass on</lex>
+    <lex>result</lex>
+    <lex>entrust</lex>
+    <lex>go away</lex>
+    <lex>leave-taking</lex>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityNegativeAction"/>
+    </rdfs:subClassOf>
+    <lex>leave</lex>
+    <lex>bequeath</lex>
+    <lex>allow for</lex>
+    <lex>get out</lex>
+    <lex>exit</lex>
+    <lex>will</lex>
+    <lex>leave alone</lex>
+    <synset>leave#verb#0</synset>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#GenericNegativeProperty">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PropertyMention"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenancePositiveProperty">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenancePropertyMention"/>
+    <synset>sustenance#noun#1</synset>
+    <lex>sustenance</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenancePositiveAction">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenanceActionMention"/>
+    </rdfs:subClassOf>
+    <synset>sustenance#noun#1</synset>
+    <lex>sustenance</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Style&amp;optionsNegativeEntity">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Style&amp;optionsMention"/>
+    </rdfs:subClassOf>
+    <lex>style&amp;options</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Sentiment"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServiceActionMention">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ActionMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServiceMention"/>
+    <synset>service#noun#15</synset>
+    <lex>service</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PricesPropertyMention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PropertyMention"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PricesMention"/>
+    <lex>ambience</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServicePropertyMention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PropertyMention"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServiceMention"/>
+    <synset>service#noun#15</synset>
+    <lex>service</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Wait">
+    <lex>hold</lex>
+    <lex>hold back</lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServiceActionMention"/>
+    <synset>wait#verb#1</synset>
+    <lex>waiting</lex>
+    <lex>wait</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#AmbienceActionMention">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ActionMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#AmbienceMention"/>
+    <synset>ambience#noun#1</synset>
+    <lex>ambience</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Appreciate">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#GenericPositiveActionMention"/>
+    <synset>appreciate#verb#1</synset>
+    <lex>appreciate</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Style&amp;optionsPositiveAction">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Style&amp;optionsActionMention"/>
+    </rdfs:subClassOf>
+    <lex>style&amp;options</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#AmbiencePositiveEntity">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#AmbienceMention"/>
+    <synset>ambience#noun#1</synset>
+    <lex>ambience</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PricesNegativeProperty">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PricesPropertyMention"/>
+    <lex>prices</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationNegativeAction">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationActionMention"/>
+    </rdfs:subClassOf>
+    <synset>location#noun#1</synset>
+    <lex>location</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#GenericPositiveAction">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ActionMention"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityPositiveEntity">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityMention"/>
+    </rdfs:subClassOf>
+    <lex>quality</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PricesNegativeAction">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PricesActionMention"/>
+    </rdfs:subClassOf>
+    <lex>prices</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Loathe">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#GenericNegativeActionMention"/>
+    <synset>loathe#verb#1</synset>
+    <lex>loathe</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServiceNegativeAction">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServiceActionMention"/>
+    <synset>service#noun#15</synset>
+    <lex>service</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityPositiveAction">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityActionMention"/>
+    </rdfs:subClassOf>
+    <lex>quality</lex>
+  </owl:Class>
+  <owl:Class>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <owl:intersectionOf rdf:parseType="Collection">
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Leave"/>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityMention"/>
+    </owl:intersectionOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Enjoy">
+    <lex>bask</lex>
+    <lex>delight</lex>
+    <synset>enjoy#verb#1</synset>
+    <lex>savor</lex>
+    <lex>revel</lex>
+    <lex>relish</lex>
+    <lex>savour</lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#GenericPositiveActionMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationNegativeAction"/>
+    <lex>enjoy</lex>
+    <lex>love</lex>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServicePositiveAction"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityPositiveAction"/>
+    <synset>enjoy#verb#0</synset>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PropertyMention">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Mention"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Price">
+    <lex>leontyne price</lex>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationActionMention"/>
+    </rdfs:subClassOf>
+    <lex>price</lex>
+    <lex>damage</lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServiceActionMention"/>
+    <lex>monetary value</lex>
+    <lex>cost</lex>
+    <synset>price#verb#1</synset>
+    <lex>terms</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationNegativeEntity">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationMention"/>
+    </rdfs:subClassOf>
+    <synset>location#noun#1</synset>
+    <lex>location</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#RestaurantMention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#EntityMention"/>
+    </rdfs:subClassOf>
+    <aspect>RESTAURANT#PRICES</aspect>
+    <aspect>RESTAURANT#GENERAL</aspect>
+    <synset>restaurant#noun#1</synset>
+    <lex>restaurant</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#AmbienceNegativeEntity">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#AmbienceMention"/>
+    <synset>ambience#noun#1</synset>
+    <lex>ambience</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServicePositiveEntity">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServiceMention"/>
+    <synset>service#noun#15</synset>
+    <lex>service</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityNegativeAction">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityActionMention"/>
+    </rdfs:subClassOf>
+    <lex>quality</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationActionMention">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ActionMention"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationMention"/>
+    </rdfs:subClassOf>
+    <synset>location#noun#1</synset>
+    <lex>location</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServicePositiveAction">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServiceActionMention"/>
+    <synset>service#noun#15</synset>
+    <lex>service</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Style&amp;optionsMention">
+    <lex>style</lex>
+    <lex>options</lex>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#EntityMention"/>
+    </rdfs:subClassOf>
+    <aspect>SUSTENANCE#STYLE&amp;OPTIONS</aspect>
+    <lex>style&amp;options</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#DrinksMention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenanceMention"/>
+    </rdfs:subClassOf>
+    <aspect>QUALITY</aspect>
+    <aspect>PRICES</aspect>
+    <aspect>STYLE&amp;OPTIONS</aspect>
+    <synset>drinks#noun#1</synset>
+    <lex>drinks</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenanceNegativeAction">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenanceActionMention"/>
+    </rdfs:subClassOf>
+    <synset>sustenance#noun#1</synset>
+    <lex>sustenance</lex>
+  </owl:Class>
+  <owl:Class>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <owl:intersectionOf rdf:parseType="Collection">
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Enjoy"/>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityMention"/>
+    </owl:intersectionOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationPositiveAction">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationActionMention"/>
+    <synset>location#noun#1</synset>
+    <lex>location</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationMention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#EntityMention"/>
+    </rdfs:subClassOf>
+    <aspect>LOCATION#GENERAL</aspect>
+    <synset>location#noun#1</synset>
+    <lex>location</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Style&amp;optionsPositiveProperty">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Style&amp;optionsPropertyMention"/>
+    </rdfs:subClassOf>
+    <lex>style&amp;options</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#FoodMention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenanceMention"/>
+    </rdfs:subClassOf>
+    <aspect>QUALITY</aspect>
+    <aspect>PRICES</aspect>
+    <aspect>STYLE&amp;OPTIONS</aspect>
+    <synset>food#noun#1</synset>
+    <lex>food</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityMention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#EntityMention"/>
+    </rdfs:subClassOf>
+    <aspect>SUSTENANCE#QUALITY</aspect>
+    <lex>quality</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Style&amp;optionsPositiveEntity">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Style&amp;optionsMention"/>
+    <lex>style&amp;options</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenanceMention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#EntityMention"/>
+    </rdfs:subClassOf>
+    <aspect>SUSTENANCE#QUALITY</aspect>
+    <aspect>SUSTENANCE#PRICES</aspect>
+    <aspect>SUSTENANCE#STYLE&amp;OPTIONS</aspect>
+    <synset>sustenance#noun#1</synset>
+    <lex>sustenance</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Like">
+    <lex>the likes of</lex>
+    <lex>similar</lex>
+    <lex>wish</lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <synset>like#verb#1</synset>
+    <lex>ilk</lex>
+    <lex>like</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PricesPositiveAction">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PricesActionMention"/>
+    </rdfs:subClassOf>
+    <lex>prices</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#GenericPositiveProperty">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PropertyMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#AmbienceNegativeAction">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#AmbienceActionMention"/>
+    <synset>ambience#noun#1</synset>
+    <lex>ambience</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServiceNegativeEntity">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServiceMention"/>
+    <synset>service#noun#15</synset>
+    <lex>service</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#GenericNegativeAction">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ActionMention"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#EntityMention">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Mention"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenanceNegativeProperty">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenancePropertyMention"/>
+    <synset>sustenance#noun#1</synset>
+    <lex>sustenance</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Style&amp;optionsPropertyMention">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PropertyMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Style&amp;optionsMention"/>
+    <lex>ambience</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PricesActionMention">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ActionMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PricesMention"/>
+    <lex>ambience</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PricesPositiveProperty">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PricesPropertyMention"/>
+    <lex>prices</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PricesNegativeEntity">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PricesMention"/>
+    <lex>prices</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Style&amp;optionsActionMention">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ActionMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Style&amp;optionsMention"/>
+    <lex>ambience</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenanceActionMention">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ActionMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenanceMention"/>
+    <synset>sustenance#noun#1</synset>
+    <lex>sustenance</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ExperienceMention">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#EntityMention"/>
+    <aspect>RESTAURANT#MISCELLANEOUS</aspect>
+    <synset>experience#noun#3</synset>
+    <lex>experience</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityPositiveProperty">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityPropertyMention"/>
+    </rdfs:subClassOf>
+    <lex>quality</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityNegativeProperty">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityPropertyMention"/>
+    </rdfs:subClassOf>
+    <lex>quality</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServiceNegativeProperty">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServicePropertyMention"/>
+    <synset>service#noun#15</synset>
+    <lex>service</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#AmbienceNegativeProperty">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#AmbiencePropertyMention"/>
+    <synset>ambience#noun#1</synset>
+    <lex>ambience</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityActionMention">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ActionMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityMention"/>
+    <lex>ambience</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#AmbiencePositiveAction">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#AmbienceActionMention"/>
+    <synset>ambience#noun#1</synset>
+    <lex>ambience</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenancePositiveEntity">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#SustenanceMention"/>
+    <synset>sustenance#noun#1</synset>
+    <lex>sustenance</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServicePositiveProperty">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServicePropertyMention"/>
+    <synset>service#noun#15</synset>
+    <lex>service</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PersonMention">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#EntityMention"/>
+    <synset>person#noun#1</synset>
+    <lex>person</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#GenericNegativeEntity">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#EntityMention"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationPropertyMention">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PropertyMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationMention"/>
+    <synset>location#noun#1</synset>
+    <lex>location</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#TimeMention">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#EntityMention"/>
+    <synset>time#noun#2</synset>
+    <lex>time</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationPositiveProperty">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationPropertyMention"/>
+    <synset>location#noun#1</synset>
+    <lex>location</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationNegativeProperty">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#LocationPropertyMention"/>
+    <synset>location#noun#1</synset>
+    <lex>location</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityNegativeEntity">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityMention"/>
+    <lex>quality</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Neutral">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Sentiment"/>
+  </owl:Class>
+  <owl:Class>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <owl:intersectionOf rdf:parseType="Collection">
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Leave"/>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServiceMention"/>
+    </owl:intersectionOf>
+  </owl:Class>
+  <owl:Class>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <owl:intersectionOf rdf:parseType="Collection">
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Enjoy"/>
+      <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#ServiceMention"/>
+    </owl:intersectionOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#GenericPositiveEntity">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#EntityMention"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Style&amp;optionsNegativeAction">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Style&amp;optionsActionMention"/>
+    <lex>style&amp;options</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityPropertyMention">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#PropertyMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#QualityMention"/>
+    <lex>ambience</lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#AmbiencePositiveProperty">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase#AmbiencePropertyMention"/>
+    <synset>ambience#noun#1</synset>
+    <lex>ambience</lex>
+  </owl:Class>
+</rdf:RDF>

@@ -1,0 +1,751 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:Restaurant="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Positive">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentValue"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Country">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#LocationMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>country</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Full">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>full</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Pain">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericNegativeSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>pain</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Mussel">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>mussel</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Surprise">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>surprise</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Area">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>area</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Burger">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>burger</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Size">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#PricesMention"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#ServiceMention"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>size</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#LocationNegativeSentiment">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>positioning</Restaurant:lex>
+    <Restaurant:lex>emplacement</Restaurant:lex>
+    <Restaurant:lex>position</Restaurant:lex>
+    <Restaurant:lex>placement</Restaurant:lex>
+    <Restaurant:lex>localization</Restaurant:lex>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Negative"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>location</Restaurant:lex>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#LocationMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>localisation</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Lobster">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>lobster</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Leave">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericNegativeSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>leave</Restaurant:lex>
+  </owl:Class>
+  <owl:Class>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Positive"/>
+    <owl:intersectionOf rdf:parseType="Collection">
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Best"/>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#ServiceMention"/>
+    </owl:intersectionOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Worry">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericNegativeSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>worry</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#ServiceNegativeSentiment">
+    <Restaurant:lex>table service</Restaurant:lex>
+    <Restaurant:lex>help</Restaurant:lex>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Negative"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#ServiceMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>service</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Store">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#LocationMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>store</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#ServiceMention">
+    <Restaurant:lex>table service</Restaurant:lex>
+    <Restaurant:lex>help</Restaurant:lex>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AspectMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:aspect>SERVICE#GENERAL</Restaurant:aspect>
+    <Restaurant:lex>service</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Spoon">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>spoon</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Negative">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentValue"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Perfection">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>perfection</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#DrinksMention">
+    <Restaurant:lex>beverage</Restaurant:lex>
+    <Restaurant:lex>booze</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AspectMention"/>
+    <Restaurant:aspect>DRINKS#PRICES</Restaurant:aspect>
+    <Restaurant:aspect>DRINKS#QUALITY</Restaurant:aspect>
+    <Restaurant:aspect>DRINKS#STYLE&amp;OPTIONS</Restaurant:aspect>
+    <Restaurant:lex>drinks</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#PricesPositiveSentiment">
+    <Restaurant:lex>cost</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#PricesMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>prices</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Time">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AmbienceMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>time</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Ambience">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>ambience</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Mall">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#LocationMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>mall</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#John">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>john</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Tartar">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>tartar</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Order">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#ServiceMention"/>
+    <Restaurant:lex>order</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Jalapeno">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Style&amp;optionsMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>jalapeno</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Wrap">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>wrap</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Pot">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>pot</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Experience">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AmbienceMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>experience</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Hot">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>hot</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Doubt">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericNegativeSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>doubt</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Boring">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericNegativeSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>boring</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#QualityPositiveSentiment">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#QualityMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>quality</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Benefit">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>benefit</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Entry">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>entry</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#LocationMention">
+    <Restaurant:aspect>LOCATION#GENERAL</Restaurant:aspect>
+    <Restaurant:lex>emplacement</Restaurant:lex>
+    <Restaurant:lex>localisation</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AspectMention"/>
+    <Restaurant:lex>localization</Restaurant:lex>
+    <Restaurant:lex>positioning</Restaurant:lex>
+    <Restaurant:lex>position</Restaurant:lex>
+    <Restaurant:lex>placement</Restaurant:lex>
+    <Restaurant:lex>location</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Block">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#LocationMention"/>
+    <Restaurant:lex>block</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Spinach">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>spinach</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#City">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#LocationMention"/>
+    <Restaurant:lex>city</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Hamburger">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>hamburger</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Inconvenience">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericNegativeSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>inconvenience</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#ServicePositiveSentiment">
+    <Restaurant:lex>table service</Restaurant:lex>
+    <Restaurant:lex>help</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#ServiceMention"/>
+    <Restaurant:lex>service</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#DrinksNegativeSentiment">
+    <Restaurant:lex>beverage</Restaurant:lex>
+    <Restaurant:lex>booze</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#DrinksMention"/>
+    <Restaurant:lex>drinks</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#State">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#LocationMention"/>
+    <Restaurant:lex>state</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodPositiveSentiment">
+    <Restaurant:lex>solid food</Restaurant:lex>
+    <Restaurant:lex>nutrient</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>food</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Cabbage">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>cabbage</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Laugh">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>laugh</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Room">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>room</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Pace">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#ServiceMention"/>
+    <Restaurant:lex>pace</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Flavor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>flavor</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericNegativeSentiment">
+    <Restaurant:lex>disfavor</Restaurant:lex>
+    <Restaurant:lex>disapproval</Restaurant:lex>
+    <Restaurant:lex>disfavour</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Negative"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Serve">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#ServiceMention"/>
+    <Restaurant:lex>serve</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Als">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>als</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Best">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#ContextDependentSentimentMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>best</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Taste">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>taste</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Like">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>like</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#QualityMention">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AspectMention"/>
+    <Restaurant:aspect>FOOD#QUALITY</Restaurant:aspect>
+    <Restaurant:aspect>DRINKS#QUALITY</Restaurant:aspect>
+    <Restaurant:lex>quality</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#QualityNegativeSentiment">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#QualityMention"/>
+    <Restaurant:lex>quality</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Casino">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>casino</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Traffic">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#LocationMention"/>
+    <Restaurant:lex>traffic</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Nthe">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericNegativeSentiment"/>
+    <Restaurant:lex>nthe</Restaurant:lex>
+  </owl:Class>
+  <owl:Class>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Positive"/>
+    <owl:intersectionOf rdf:parseType="Collection">
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Best"/>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Style&amp;optionsMention"/>
+    </owl:intersectionOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Wonderful">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>wonderful</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Cup">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>cup</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Town">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#LocationMention"/>
+    <Restaurant:lex>town</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Batter">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>batter</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#PricesNegativeSentiment">
+    <Restaurant:lex>cost</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#PricesMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>prices</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention">
+    <Restaurant:lex>solid food</Restaurant:lex>
+    <Restaurant:lex>nutrient</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AspectMention"/>
+    <Restaurant:aspect>FOOD#PRICES</Restaurant:aspect>
+    <Restaurant:aspect>FOOD#QUALITY</Restaurant:aspect>
+    <Restaurant:aspect>FOOD#STYLE&amp;OPTIONS</Restaurant:aspect>
+    <Restaurant:lex>food</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Feeling">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    <Restaurant:lex>feeling</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Hall">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>hall</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Bathroom">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>bathroom</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Free">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>free</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AmbienceMention">
+    <Restaurant:lex>ambiance</Restaurant:lex>
+    <Restaurant:lex>atmosphere</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AspectMention"/>
+    <Restaurant:aspect>AMBIENCE#GENERAL</Restaurant:aspect>
+    <Restaurant:lex>ambience</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Style&amp;optionsNegativeSentiment">
+    <Restaurant:lex>style</Restaurant:lex>
+    <Restaurant:lex>style&amp;options</Restaurant:lex>
+    <Restaurant:lex>way</Restaurant:lex>
+    <Restaurant:lex>alternative</Restaurant:lex>
+    <Restaurant:lex>flair</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <Restaurant:lex>options</Restaurant:lex>
+    <Restaurant:lex>mode</Restaurant:lex>
+    <Restaurant:lex>selection</Restaurant:lex>
+    <Restaurant:lex>manner</Restaurant:lex>
+    <Restaurant:lex>option</Restaurant:lex>
+    <Restaurant:lex>pick</Restaurant:lex>
+    <Restaurant:lex>trend</Restaurant:lex>
+    <Restaurant:lex>fashion</Restaurant:lex>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Style&amp;optionsMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>choice</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Feel">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AmbienceMention"/>
+    <Restaurant:lex>feel</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Sub">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    <Restaurant:lex>sub</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Tap">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>tap</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Recommend">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>recommend</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AmbienceNegativeSentiment">
+    <Restaurant:lex>ambiance</Restaurant:lex>
+    <Restaurant:lex>atmosphere</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AmbienceMention"/>
+    <Restaurant:lex>ambience</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Style&amp;optionsMention">
+    <Restaurant:lex>selection</Restaurant:lex>
+    <Restaurant:lex>fashion</Restaurant:lex>
+    <Restaurant:lex>style&amp;options</Restaurant:lex>
+    <Restaurant:aspect>FOOD#STYLE&amp;OPTIONS</Restaurant:aspect>
+    <Restaurant:lex>pick</Restaurant:lex>
+    <Restaurant:lex>manner</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AspectMention"/>
+    <Restaurant:lex>choice</Restaurant:lex>
+    <Restaurant:lex>style</Restaurant:lex>
+    <Restaurant:lex>trend</Restaurant:lex>
+    <Restaurant:lex>option</Restaurant:lex>
+    <Restaurant:lex>options</Restaurant:lex>
+    <Restaurant:aspect>DRINKS#STYLE&amp;OPTIONS</Restaurant:aspect>
+    <Restaurant:lex>way</Restaurant:lex>
+    <Restaurant:lex>mode</Restaurant:lex>
+    <Restaurant:lex>flair</Restaurant:lex>
+    <Restaurant:lex>alternative</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#ContextDependentSentimentMention">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+  </owl:Class>
+  <owl:Class>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Positive"/>
+    <owl:intersectionOf rdf:parseType="Collection">
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Best"/>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    </owl:intersectionOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Tip">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>tip</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodNegativeSentiment">
+    <Restaurant:lex>solid food</Restaurant:lex>
+    <Restaurant:lex>nutrient</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    <Restaurant:lex>food</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#DrinksPositiveSentiment">
+    <Restaurant:lex>beverage</Restaurant:lex>
+    <Restaurant:lex>booze</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#DrinksMention"/>
+    <Restaurant:lex>drinks</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Long">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#ServiceNegativeSentiment"/>
+    <Restaurant:lex>long</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Smell">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    <Restaurant:lex>smell</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Assortment">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Style&amp;optionsMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    <Restaurant:lex>assortment</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Level">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#ServiceMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Style&amp;optionsMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    <Restaurant:lex>level</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#RestaurantMention">
+    <Restaurant:lex>eating house</Restaurant:lex>
+    <Restaurant:lex>eatery</Restaurant:lex>
+    <Restaurant:lex>eating place</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AspectMention"/>
+    <Restaurant:aspect>RESTAURANT#PRICES</Restaurant:aspect>
+    <Restaurant:aspect>RESTAURANT#GENERAL</Restaurant:aspect>
+    <Restaurant:lex>restaurant</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#LocationPositiveSentiment">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#LocationMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Positive"/>
+    <Restaurant:lex>positioning</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <Restaurant:lex>location</Restaurant:lex>
+    <Restaurant:lex>localization</Restaurant:lex>
+    <Restaurant:lex>placement</Restaurant:lex>
+    <Restaurant:lex>position</Restaurant:lex>
+    <Restaurant:lex>localisation</Restaurant:lex>
+    <Restaurant:lex>emplacement</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Tapas">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    <Restaurant:lex>tapas</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Quality">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#RestaurantMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#ServiceMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Style&amp;optionsMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    <Restaurant:lex>quality</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Worker">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#ServiceMention"/>
+    <Restaurant:lex>worker</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Appeal">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>appeal</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Right">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>right</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Lounge">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#RestaurantMention"/>
+    <Restaurant:lex>lounge</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AmbiencePositiveSentiment">
+    <Restaurant:lex>ambiance</Restaurant:lex>
+    <Restaurant:lex>atmosphere</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AmbienceMention"/>
+    <Restaurant:lex>ambience</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Band">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AmbienceMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#LocationMention"/>
+    <Restaurant:lex>band</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericPositiveSentiment">
+    <Restaurant:lex>value</Restaurant:lex>
+    <Restaurant:lex>treasure</Restaurant:lex>
+    <Restaurant:lex>delight</Restaurant:lex>
+    <Restaurant:lex>love</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Positive"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Chicago">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#LocationMention"/>
+    <Restaurant:lex>chicago</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Style&amp;optionsPositiveSentiment">
+    <Restaurant:lex>mode</Restaurant:lex>
+    <Restaurant:lex>flair</Restaurant:lex>
+    <Restaurant:lex>trend</Restaurant:lex>
+    <Restaurant:lex>options</Restaurant:lex>
+    <Restaurant:lex>option</Restaurant:lex>
+    <Restaurant:lex>pick</Restaurant:lex>
+    <Restaurant:lex>choice</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Style&amp;optionsMention"/>
+    <Restaurant:lex>way</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#SentimentMention"/>
+    <Restaurant:lex>style</Restaurant:lex>
+    <Restaurant:lex>style&amp;options</Restaurant:lex>
+    <Restaurant:lex>selection</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Positive"/>
+    <Restaurant:lex>alternative</Restaurant:lex>
+    <Restaurant:lex>fashion</Restaurant:lex>
+    <Restaurant:lex>manner</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Variety">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Style&amp;optionsMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    <Restaurant:lex>variety</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Gyro">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodMention"/>
+    <Restaurant:lex>gyro</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#PricesMention">
+    <Restaurant:lex>cost</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#AspectMention"/>
+    <Restaurant:aspect>DRINKS#PRICES</Restaurant:aspect>
+    <Restaurant:aspect>FOOD#PRICES</Restaurant:aspect>
+    <Restaurant:aspect>RESTAURANT#PRICES</Restaurant:aspect>
+    <Restaurant:lex>prices</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Entrance">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#RestaurantMention"/>
+    <Restaurant:lex>entrance</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Dry">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#FoodNegativeSentiment"/>
+    <Restaurant:lex>dry</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#Clean">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant#GenericPositiveSentiment"/>
+    <Restaurant:lex>clean</Restaurant:lex>
+  </owl:Class>
+</rdf:RDF>

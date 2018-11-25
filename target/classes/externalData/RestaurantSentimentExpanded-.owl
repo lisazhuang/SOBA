@@ -1,0 +1,1005 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:Restaurant="http://www.kimschouten.com/sentiment/restaurant#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.kimschouten.com/sentiment/restaurant"/>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Sushi">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>sushi</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Drink">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#DrinksMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>drink</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Kitchen">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>kitchen</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ContextDependentSentimentMention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Cash">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#PricesMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>cash</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Employee">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ServiceMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>employee</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#DrinksPositiveSentiment">
+    <Restaurant:lex>beverage</Restaurant:lex>
+    <Restaurant:lex>boozing</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+    <Restaurant:lex>drinking</Restaurant:lex>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#DrinksMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>imbibe</Restaurant:lex>
+    <Restaurant:lex>drink</Restaurant:lex>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Positive"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>booze</Restaurant:lex>
+    <Restaurant:lex>drinks</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Awesome">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>awesome</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Quick">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ServicePositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>quick</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Shrimp">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>shrimp</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Price">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#PricesMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>price</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#PricesMention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#AspectMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:aspect>DRINKS#PRICES</Restaurant:aspect>
+    <Restaurant:aspect>FOOD#PRICES</Restaurant:aspect>
+    <Restaurant:aspect>RESTAURANT#PRICES</Restaurant:aspect>
+    <Restaurant:lex>cost</Restaurant:lex>
+    <Restaurant:lex>price</Restaurant:lex>
+    <Restaurant:lex>prices</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Busy">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ServiceNegativeSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>busy</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#PricesPositiveSentiment">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Positive"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#PricesMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+    <Restaurant:lex>cost</Restaurant:lex>
+    <Restaurant:lex>price</Restaurant:lex>
+    <Restaurant:lex>prices</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Staff">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ServiceMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>staff</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Ingredient">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>ingredient</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Cheap">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#PricesPositiveSentiment"/>
+    <Restaurant:lex>cheap</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Option">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>option</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Bread">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>bread</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Tasty">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>tasty</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#QualityMention">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#AspectMention"/>
+    <Restaurant:aspect>DRINKS#QUALITY</Restaurant:aspect>
+    <Restaurant:aspect>FOOD#QUALITY</Restaurant:aspect>
+    <Restaurant:lex>caliber</Restaurant:lex>
+    <Restaurant:lex>calibre</Restaurant:lex>
+    <Restaurant:lex>prime</Restaurant:lex>
+    <Restaurant:lex>quality</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Plenty">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>plenty</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Stomach">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>stomach</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Breakfast">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>breakfast</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Bar">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#DrinksMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>bar</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Pay">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#PricesMention"/>
+    <Restaurant:lex>pay</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsNegativeSentiment">
+    <Restaurant:lex>options</Restaurant:lex>
+    <Restaurant:lex>trend</Restaurant:lex>
+    <Restaurant:lex>choice</Restaurant:lex>
+    <Restaurant:lex>pick</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+    <Restaurant:lex>option</Restaurant:lex>
+    <Restaurant:lex>way</Restaurant:lex>
+    <Restaurant:lex>selection</Restaurant:lex>
+    <Restaurant:lex>fashion</Restaurant:lex>
+    <Restaurant:lex>style&amp;options</Restaurant:lex>
+    <Restaurant:lex>flair</Restaurant:lex>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Negative"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>manner</Restaurant:lex>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>alternative</Restaurant:lex>
+    <Restaurant:lex>style</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Roll">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>roll</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Manager">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ServiceMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>manager</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Club">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>club</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Appetizer">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>appetizer</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Mean">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ServiceNegativeSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>mean</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Glass">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#DrinksMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>glass</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Water">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#DrinksMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>water</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Size">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>size</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#High">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#PricesNegativeSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>high</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Plate">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>plate</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Slow">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ServiceNegativeSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>slow</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Chef">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>chef</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#AmbienceNegativeSentiment">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#AmbienceMention"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Negative"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+    <Restaurant:lex>ambiance</Restaurant:lex>
+    <Restaurant:lex>ambience</Restaurant:lex>
+    <Restaurant:lex>atmosphere</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#QualityPositiveSentiment">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Positive"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#QualityMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+    <Restaurant:lex>caliber</Restaurant:lex>
+    <Restaurant:lex>calibre</Restaurant:lex>
+    <Restaurant:lex>prime</Restaurant:lex>
+    <Restaurant:lex>quality</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Bite">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>bite</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Portion">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>portion</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Fries">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>fries</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Hostess">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ServiceMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>hostess</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Owner">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ServiceMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>owner</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#LocationPositiveSentiment">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#LocationMention"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Positive"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+    <Restaurant:lex>emplacement</Restaurant:lex>
+    <Restaurant:lex>location</Restaurant:lex>
+    <Restaurant:lex>placement</Restaurant:lex>
+    <Restaurant:lex>position</Restaurant:lex>
+    <Restaurant:lex>positioning</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Beer">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#DrinksMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>beer</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#DrinksNegativeSentiment">
+    <Restaurant:lex>imbibe</Restaurant:lex>
+    <Restaurant:lex>drinking</Restaurant:lex>
+    <Restaurant:lex>beverage</Restaurant:lex>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#DrinksMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>booze</Restaurant:lex>
+    <Restaurant:lex>boozing</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+    <Restaurant:lex>drinks</Restaurant:lex>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Negative"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>drink</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Item">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>item</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Table">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>table</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Super">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>super</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Buffet">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>buffet</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Selection">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>selection</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#LocationMention">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#AspectMention"/>
+    <Restaurant:aspect>LOCATION#GENERAL</Restaurant:aspect>
+    <Restaurant:lex>emplacement</Restaurant:lex>
+    <Restaurant:lex>location</Restaurant:lex>
+    <Restaurant:lex>placement</Restaurant:lex>
+    <Restaurant:lex>position</Restaurant:lex>
+    <Restaurant:lex>positioning</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Experience">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>experience</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Cool">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>cool</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Waiter">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ServiceMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>waiter</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Soup">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>soup</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Cost">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#PricesMention"/>
+    <Restaurant:lex>cost</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Dine">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>dine</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodMention">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#AspectMention"/>
+    <Restaurant:aspect>FOOD#PRICES</Restaurant:aspect>
+    <Restaurant:aspect>FOOD#QUALITY</Restaurant:aspect>
+    <Restaurant:aspect>FOOD#STYLE&amp;OPTIONS</Restaurant:aspect>
+    <Restaurant:lex>food</Restaurant:lex>
+    <Restaurant:lex>nutrient</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Fish">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>fish</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Pick">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>pick</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Wrong">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#GenericNegativeSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>wrong</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Delivery">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>delivery</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Terrible">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#GenericNegativeSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>terrible</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Awful">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#GenericNegativeSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>awful</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#LocationNegativeSentiment">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#LocationMention"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Negative"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+    <Restaurant:lex>emplacement</Restaurant:lex>
+    <Restaurant:lex>location</Restaurant:lex>
+    <Restaurant:lex>placement</Restaurant:lex>
+    <Restaurant:lex>position</Restaurant:lex>
+    <Restaurant:lex>positioning</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Pizza">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>pizza</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Flavor">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>flavor</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#GenericNegativeSentiment">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Negative"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Cook">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>cook</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Dish">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>dish</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Dining">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>dining</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodPositiveSentiment">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Positive"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+    <Restaurant:lex>food</Restaurant:lex>
+    <Restaurant:lex>nutrient</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Best">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>best</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Nice">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>nice</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Amount">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>amount</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Good">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>good</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Sauce">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>sauce</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Dry">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodNegativeSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>dry</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Horrible">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#GenericNegativeSentiment"/>
+    <Restaurant:lex>horrible</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Delicious">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodPositiveSentiment"/>
+    <Restaurant:lex>delicious</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Side">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>side</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#List">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>list</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Piece">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>piece</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Visit">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>visit</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Treat">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>treat</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Different">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>different</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#DrinksMention">
+    <Restaurant:lex>drink</Restaurant:lex>
+    <Restaurant:lex>booze</Restaurant:lex>
+    <Restaurant:lex>beverage</Restaurant:lex>
+    <Restaurant:aspect>DRINKS#STYLE&amp;OPTIONS</Restaurant:aspect>
+    <Restaurant:lex>drinks</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#AspectMention"/>
+    <Restaurant:lex>imbibe</Restaurant:lex>
+    <Restaurant:aspect>DRINKS#QUALITY</Restaurant:aspect>
+    <Restaurant:lex>boozing</Restaurant:lex>
+    <Restaurant:lex>drinking</Restaurant:lex>
+    <Restaurant:aspect>DRINKS#PRICES</Restaurant:aspect>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Taste">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>taste</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Business">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>business</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#AmbiencePositiveSentiment">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#AmbienceMention"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Positive"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+    <Restaurant:lex>ambiance</Restaurant:lex>
+    <Restaurant:lex>ambience</Restaurant:lex>
+    <Restaurant:lex>atmosphere</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Positive">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#SentimentValue"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Lovely">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>lovely</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsPositiveSentiment">
+    <Restaurant:lex>alternative</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#Positive"/>
+    <Restaurant:lex>fashion</Restaurant:lex>
+    <Restaurant:lex>option</Restaurant:lex>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>selection</Restaurant:lex>
+    <Restaurant:lex>options</Restaurant:lex>
+    <Restaurant:lex>choice</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+    <Restaurant:lex>pick</Restaurant:lex>
+    <Restaurant:lex>way</Restaurant:lex>
+    <Restaurant:lex>style</Restaurant:lex>
+    <Restaurant:lex>style&amp;options</Restaurant:lex>
+    <Restaurant:lex>trend</Restaurant:lex>
+    <Restaurant:lex>manner</Restaurant:lex>
+    <Restaurant:lex>flair</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Negative">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentValue"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Onion">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>onion</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Bacon">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>bacon</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Ice">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#DrinksMention"/>
+    <Restaurant:lex>ice</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Salmon">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>salmon</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#AmbienceMention">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#AspectMention"/>
+    <Restaurant:aspect>AMBIENCE#GENERAL</Restaurant:aspect>
+    <Restaurant:lex>ambiance</Restaurant:lex>
+    <Restaurant:lex>ambience</Restaurant:lex>
+    <Restaurant:lex>atmosphere</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Wonderful">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment"/>
+    <Restaurant:lex>wonderful</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Disappointing">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#GenericNegativeSentiment"/>
+    <Restaurant:lex>disappointing</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Potato">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>potato</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Waitress">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ServiceMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>waitress</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Sugar">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>sugar</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Great">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment"/>
+    <Restaurant:lex>great</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#PricesNegativeSentiment">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#PricesMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+    <Restaurant:lex>cost</Restaurant:lex>
+    <Restaurant:lex>price</Restaurant:lex>
+    <Restaurant:lex>prices</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Salad">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>salad</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Order">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ServiceMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>order</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Restaurant">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#RestaurantMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>restaurant</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ServicePositiveSentiment">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ServiceMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>help</Restaurant:lex>
+    <Restaurant:lex>serve</Restaurant:lex>
+    <Restaurant:lex>service</Restaurant:lex>
+    <Restaurant:lex>table service</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Tea">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#DrinksMention"/>
+    <Restaurant:lex>tea</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Fantastic">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment"/>
+    <Restaurant:lex>fantastic</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Friendly">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#ServicePositiveSentiment"/>
+    <Restaurant:lex>friendly</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Ham">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>ham</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Chicken">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>chicken</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Server">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ServiceMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>server</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Amazing">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment"/>
+    <Restaurant:lex>amazing</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Fry">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>fry</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Management">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ServiceMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>management</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Excellent">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment"/>
+    <Restaurant:lex>excellent</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Beef">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>beef</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Worst">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#GenericNegativeSentiment"/>
+    <Restaurant:lex>worst</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#FoodNegativeSentiment">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+    <Restaurant:lex>food</Restaurant:lex>
+    <Restaurant:lex>nutrient</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Sweet">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment"/>
+    <Restaurant:lex>sweet</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Burger">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>burger</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Tomato">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>tomato</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Kind">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#ServicePositiveSentiment"/>
+    <Restaurant:lex>kind</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Atmosphere">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#AmbienceMention"/>
+    <Restaurant:lex>atmosphere</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Menu">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsMention"/>
+    </rdfs:subClassOf>
+    <Restaurant:lex>menu</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Dinner">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>dinner</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Rice">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>rice</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Fast">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#ServicePositiveSentiment"/>
+    <Restaurant:lex>fast</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Perfect">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment"/>
+    <Restaurant:lex>perfect</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Healthy">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodPositiveSentiment"/>
+    <Restaurant:lex>healthy</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Special">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment"/>
+    <Restaurant:lex>special</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Style&amp;optionsMention">
+    <Restaurant:lex>way</Restaurant:lex>
+    <Restaurant:lex>option</Restaurant:lex>
+    <Restaurant:lex>style</Restaurant:lex>
+    <Restaurant:aspect>FOOD#STYLE&amp;OPTIONS</Restaurant:aspect>
+    <Restaurant:lex>selection</Restaurant:lex>
+    <Restaurant:lex>pick</Restaurant:lex>
+    <Restaurant:lex>choice</Restaurant:lex>
+    <Restaurant:lex>trend</Restaurant:lex>
+    <Restaurant:lex>options</Restaurant:lex>
+    <Restaurant:aspect>DRINKS#STYLE&amp;OPTIONS</Restaurant:aspect>
+    <Restaurant:lex>flair</Restaurant:lex>
+    <Restaurant:lex>fashion</Restaurant:lex>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#AspectMention"/>
+    <Restaurant:lex>style&amp;options</Restaurant:lex>
+    <Restaurant:lex>alternative</Restaurant:lex>
+    <Restaurant:lex>manner</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ServiceMention">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#AspectMention"/>
+    <Restaurant:aspect>SERVICE#GENERAL</Restaurant:aspect>
+    <Restaurant:lex>help</Restaurant:lex>
+    <Restaurant:lex>serve</Restaurant:lex>
+    <Restaurant:lex>service</Restaurant:lex>
+    <Restaurant:lex>table service</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Meat">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>meat</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Lunch">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>lunch</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Better">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment"/>
+    <Restaurant:lex>better</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#ServiceNegativeSentiment">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#ServiceMention"/>
+    <Restaurant:lex>help</Restaurant:lex>
+    <Restaurant:lex>serve</Restaurant:lex>
+    <Restaurant:lex>service</Restaurant:lex>
+    <Restaurant:lex>table service</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Salt">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>salt</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#RestaurantMention">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#AspectMention"/>
+    <Restaurant:aspect>RESTAURANT#GENERAL</Restaurant:aspect>
+    <Restaurant:aspect>RESTAURANT#PRICES</Restaurant:aspect>
+    <Restaurant:lex>eatery</Restaurant:lex>
+    <Restaurant:lex>eating house</Restaurant:lex>
+    <Restaurant:lex>eating place</Restaurant:lex>
+    <Restaurant:lex>restaurant</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#QualityNegativeSentiment">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#QualityMention"/>
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#SentimentMention"/>
+    <Restaurant:lex>caliber</Restaurant:lex>
+    <Restaurant:lex>calibre</Restaurant:lex>
+    <Restaurant:lex>prime</Restaurant:lex>
+    <Restaurant:lex>quality</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Meal">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>meal</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Bad">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#GenericNegativeSentiment"/>
+    <Restaurant:lex>bad</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Pork">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>pork</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Cheese">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>cheese</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Dessert">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>dessert</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Location">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#LocationMention"/>
+    <Restaurant:lex>location</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Cream">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>cream</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Music">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#AmbienceMention"/>
+    <Restaurant:lex>music</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Happy">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment"/>
+    <Restaurant:lex>happy</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Favorite">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#GenericPositiveSentiment"/>
+    <Restaurant:lex>favorite</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Service">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#ServiceMention"/>
+    <Restaurant:lex>service</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Fresh">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodPositiveSentiment"/>
+    <Restaurant:lex>fresh</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Place">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#RestaurantMention"/>
+    <Restaurant:lex>place</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Wine">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#DrinksMention"/>
+    <Restaurant:lex>wine</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Sandwich">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>sandwich</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Chip">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#FoodMention"/>
+    <Restaurant:lex>chip</Restaurant:lex>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.kimschouten.com/sentiment/restaurant#Expensive">
+    <rdfs:subClassOf rdf:resource="http://www.kimschouten.com/sentiment/restaurant#PricesNegativeSentiment"/>
+    <Restaurant:lex>expensive</Restaurant:lex>
+  </owl:Class>
+  <owl:AnnotationProperty rdf:about="http://www.kimschouten.com/sentiment/restaurant#aspect"/>
+  <owl:AnnotationProperty rdf:about="http://www.kimschouten.com/sentiment/restaurant#lex"/>
+</rdf:RDF>

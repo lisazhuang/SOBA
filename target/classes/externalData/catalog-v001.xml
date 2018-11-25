@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1530574842081" name="duplicate:http://www.kimschouten.com/sentiment/restaurant" uri="LaptopOntologyThesisAuto5001.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1530574842081" name="duplicate:http://www.kimschouten.com/sentiment/restaurant" uri="RestaurantOntologyThesisAuto5001.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1530574842081" name="duplicate:http://www.kimschouten.com/sentiment/restaurant" uri="RestaurantSentiment.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1530574842081" name="duplicate:http://www.kimschouten.com/sentiment/restaurant" uri="restaurant_soba.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1530574842081" name="duplicate:http://www.kimschouten.com/sentiment/restaurant" uri="Seminar2017A-ExpandedOntologySeminar.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1530574842081" name="http://www.semanticweb.org/abbaa/ontologies/2018/3/untitled-ontology-5" uri="LaptopManualOntology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1530574842081" name="http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant" uri="RestaurantOntologySeminarBase.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1530574842081" name="duplicate:http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase" uri="FinalOntologyLaptopAutomatic.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1530574842081" name="duplicate:http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase" uri="laptop_soba.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1530574842081" name="duplicate:http://www.semanticweb.org/lisa.zhuang/ontologies/2018/5/RestaurantOntologyBase" uri="RestaurantOntologyThesisBase2018.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1530574842081" name="shadowed:http://www.semanticweb.org/karoliina/ontologies/2017/4/Restaurant" uri="OntologysNotUsed/RestaurantOntologySeminar2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1530574842081" name="urn:absolute:ontosenticnet" uri="ontosenticnet.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1530574842081" name="urn:absolute:senticnet-ontology" uri="SenticNet-4.0/senticnet4.owl"/>
+    </group>
+</catalog>
