@@ -8,8 +8,8 @@ The TSHM in this project is adapted so that it takes into account dictionary sem
 Because of the large size of the data files, not all resources could be added to this GitHub project. Therefore, please go to 
 https://drive.google.com/open?id=1moQG_Df0rczwkF1yNVTbkv0AKYY70pWt
 and proceed as follows:
-1) Download the files in data.zip to SOBA/src/main/resources/data. [....]
-2) Similarly, add the files in externalData.zip to SOBA/src/main/resources/externaldata.[....]
+1) Download the files in data.zip to SOBA/src/main/resources/data.
+2) Similarly, add the files in externalData.zip to SOBA/src/main/resources/externaldata. In this zip file, you find data from Yelp and Amazon, of which the reviews are used as training data for SOBA.
 
 After this, to use the ontology builder SOBA, run the class MainOntoBuild.
 
