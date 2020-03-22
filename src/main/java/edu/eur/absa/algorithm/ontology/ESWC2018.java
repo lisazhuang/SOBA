@@ -12,6 +12,9 @@ import edu.eur.absa.external.ReasoningOntology;
 import edu.eur.absa.model.Dataset;
 import edu.eur.absa.nlp.OntologyLookup;
 
+
+// ESWC SOBA
+
 /**
  * This class will run the experiments shown in our ESWC 2018 paper.
  * For the ontology access and reasoning we use the Jena library, which works okay enough
@@ -45,15 +48,16 @@ public class ESWC2018 {
 		
 		String ontology = "laptop_soba.owl";
 		
-		//Dataset train2015 =  (new DatasetJSONReader()).read(new File(Framework.DATA_PATH+"SemEval2015laptops-Train.json"));
-		//train2015.process(new OntologyLookup(null, ReasoningOntology.getOntology(Framework.EXTERNALDATA_PATH + ontology)), "review");
-		//Dataset test2015 =  (new DatasetJSONReader()).read(new File(Framework.DATA_PATH+"SemEval2015laptops-Test.json"));
-		//test2015.process(new OntologyLookup(null, ReasoningOntology.getOntology(Framework.EXTERNALDATA_PATH + ontology)), "review");
+		Dataset train2015 =  (new DatasetJSONReader()).read(new File(Framework.DATA_PATH+"SemEval2015Laptops-Train.json"));
+		train2015.process(new OntologyLookup(null, ReasoningOntology.getOntology(Framework.EXTERNALDATA_PATH + ontology)), "review");
 		
-		Dataset train2016 =  (new DatasetJSONReader()).read(new File(Framework.DATA_PATH+"SemEval2016SB1Laptops-Train.json"));
-		train2016.process(new OntologyLookup(null, ReasoningOntology.getOntology(Framework.EXTERNALDATA_PATH + ontology)), "review");
-		Dataset test2016 = (new DatasetJSONReader()).read(new File(Framework.DATA_PATH+"SemEval2016SB1Laptops-Test.json"));
-		test2016.process(new OntologyLookup(null, ReasoningOntology.getOntology(Framework.EXTERNALDATA_PATH + ontology)), "review");
+		Dataset test2015 =  (new DatasetJSONReader()).read(new File(Framework.DATA_PATH+"SemEval2015Laptops-Train.json"));
+		test2015.process(new OntologyLookup(null, ReasoningOntology.getOntology(Framework.EXTERNALDATA_PATH + ontology)), "review");
+		
+		//Dataset train2016 =  (new DatasetJSONReader()).read(new File(Framework.DATA_PATH+"SemEval2016SB1Restaurants-Train.json"));
+		//train2016.process(new OntologyLookup(null, ReasoningOntology.getOntology(Framework.EXTERNALDATA_PATH + ontology)), "review");
+		//Dataset test2016 =  (new DatasetJSONReader()).read(new File(Framework.DATA_PATH+"SemEval2016SB1Restaurants-Test.json"));
+		//test2016.process(new OntologyLookup(null, ReasoningOntology.getOntology(Framework.EXTERNALDATA_PATH + ontology)), "review");
 		
 		ontology = "laptop_soba.owl";
 		int nrc = AspectSentimentSVMAlgorithm.LAPTOPS;
@@ -84,9 +88,8 @@ public class ESWC2018 {
 			.setProperty("ont", ontology)
 			.setProperty("ont_ns", "http://www.kimschouten.com/sentiment/restaurant");
 		
-		//runExperimentTable1(Ont,BoW,OntBoW,BoWOnt,train2015);
-		runExperimentTable2(Ont,BoW,OntBoW,BoWOnt,train2016,test2016);
-
+//		runExperimentTable1(Ont,BoW,OntBoW,BoWOnt,train2015);
+		runExperimentTable2(Ont,BoW,OntBoW,BoWOnt,train2015, test2015);
 //		runExperimentTable3(Ont,train2015,test2015,train2016,test2016);
 //		runExperimentFigure5(Ont,BoW,OntBoW,BoWOnt,train2015,test2015);
 //		runExperimentFigure6(Ont,BoW,OntBoW,BoWOnt,train2016,test2016);
@@ -127,10 +130,10 @@ public class ESWC2018 {
 		Framework.log("****************************");
 		
 		Experiment.createNewExperiment()
-			.addAlgorithms(Ont, BoW, OntBoW, BoWOnt)
-			.setTrainingAndTestSet(train2016, test2016, true, 0.8, 0.2)	
-			//.setDataset(train2016)
+			.addAlgorithms(Ont, OntBoW, BoWOnt, BoW)
+			//.setDataset(train2016)	
 			//.setCrossValidation(1, 10, 0.8, 0.2)
+			.setTrainingAndTestSet(train2016, test2016, true, 0.8, 0.2)
 			.run();
 	}
 		
