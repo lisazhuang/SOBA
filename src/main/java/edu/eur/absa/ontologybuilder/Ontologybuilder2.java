@@ -1,3 +1,12 @@
+package edu.eur.absa.ontologybuilder2;
+
+public class Ontologybuilder2 {
+
+	public Ontologybuilder2() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
 package edu.eur.absa.ontologybuilder;
 
 
@@ -134,71 +143,70 @@ public class OntologyBuilder {
 		//this.suggestSynonyms("enjoy", positiveActionURI1);
 		//String positiveActionURI2 = base.addClass("appreciate#verb#1", "Appreciate", true, "appreciate", new HashSet<String>(), base.URI_GenericPositiveAction);
 		//this.suggestSynonyms("appreciate", positiveActionURI2);
-	
+		//TODO: add love and hate and like, and also maybe for properties and entities?
 		/* Loop over the aspect category entities. */
 
 		//create a hashmap with synsets as value of the entities (key), and add as synset property during loop
+
 		HashMap<String, String> entitySynsets = new HashMap<String, String>();
-		//add for aspects
 		entitySynsets.put("ambience", "ambience#noun#1");
 		entitySynsets.put("service", "service#noun#15");
 		entitySynsets.put("restaurant", "restaurant#noun#1");
 		entitySynsets.put("location", "location#noun#1");
 		entitySynsets.put("sustenance", "sustenance#noun#1"); //add drinks and food to sustenance
 
-		for (String entity : aspectCat.keySet()) { 									//for each aspect
-			HashSet<String> aspectSet = aspectCat.get(entity); 						//retrieve aspect's categories
+		for (String entity : aspectCat.keySet()) {
+			HashSet<String> aspectSet = aspectCat.get(entity);
 			/* Each entity should have its own AspectMention class. */
-			HashSet<String> aspects = new HashSet<String>();						// create 'aspect' HashSet, to contain all ASPECT#CATEGORY combinations per aspect
-			String synset = entitySynsets.get(entity);								// retrieve synset of aspect
-			for (String aspect : aspectSet) {										//per category of an aspect
+			HashSet<String> aspects = new HashSet<String>();
+			String synset = entitySynsets.get(entity);
+			for (String aspect : aspectSet) {
 
 				/* Don't add miscellaneous to the ontology. */
 				if (!aspect.equals("miscellaneous")) {
-					aspects.add(entity.toUpperCase() + "#" + aspect.toUpperCase());	// all ASPECT#CATEGORY added to 'aspects'
+					aspects.add(entity.toUpperCase() + "#" + aspect.toUpperCase());
 				}
 			}
-			String newClassURI = base.addClass(synset, entity.substring(0, 1).toUpperCase() + entity.substring(1).toLowerCase() + "Mention", true, entity, aspects, base.URI_EntityMention);
+			//String newClassURI = base.addClass(synset, entity.substring(0, 1).toUpperCase() + entity.substring(1).toLowerCase() + "Mention", true, entity, aspects, base.URI_EntityMention);
 
 			/* The domain entity doesn't get sentiment classes. */
 			if (!entity.equals(domain)) {
 
 				/* Create the SentimentMention classes (positive and negative) related to the entity. */
-				String aspectPropertyClassURI = base.addClass(synset, entity.substring(0, 1).toUpperCase() + entity.substring(1).toLowerCase() + "PropertyMention", true, entity.toLowerCase(), new HashSet<String>(), newClassURI, base.URI_PropertyMention);
-				String aspectActionClassURI =  base.addClass(synset, entity.substring(0, 1).toUpperCase() + entity.substring(1).toLowerCase() + "ActionMention", true, entity.toLowerCase(), new HashSet<String>(), newClassURI, base.URI_ActionMention);
-				String positivePropertyClassURI = base.addClass(synset, entity.substring(0, 1).toUpperCase() + entity.substring(1).toLowerCase() + "PositiveProperty", false, entity.toLowerCase(), new HashSet<String>(), aspectPropertyClassURI, base.URI_Positive);
-				String negativePropertyClassURI = base.addClass(synset, entity.substring(0, 1).toUpperCase() + entity.substring(1).toLowerCase() + "NegativeProperty", false, entity.toLowerCase(), new HashSet<String>(), aspectPropertyClassURI,  base.URI_Negative);
-				String positiveActionClassURI = base.addClass(synset, entity.substring(0, 1).toUpperCase() + entity.substring(1).toLowerCase() + "PositiveAction", false, entity.toLowerCase(), new HashSet<String>(), aspectActionClassURI, base.URI_Positive);
-				String negativeActionClassURI = base.addClass(synset, entity.substring(0, 1).toUpperCase() + entity.substring(1).toLowerCase() + "NegativeAction", false, entity.toLowerCase(), new HashSet<String>(), aspectActionClassURI, base.URI_Negative);
-				String positiveEntityClassURI = base.addClass(synset, entity.substring(0, 1).toUpperCase() + entity.substring(1).toLowerCase() + "PositiveEntity", false, entity.toLowerCase(), new HashSet<String>(), newClassURI, base.URI_Positive);
-				String negativeEntityClassURI = base.addClass(synset, entity.substring(0, 1).toUpperCase() + entity.substring(1).toLowerCase() + "NegativeEntity", false, entity.toLowerCase(), new HashSet<String>(), newClassURI, base.URI_Negative);
+				//String aspectPropertyClassURI = base.addClass(synset, entity.substring(0, 1).toUpperCase() + entity.substring(1).toLowerCase() + "PropertyMention", true, entity.toLowerCase(), new HashSet<String>(), newClassURI, base.URI_PropertyMention);
+				//String aspectActionClassURI =  base.addClass(synset, entity.substring(0, 1).toUpperCase() + entity.substring(1).toLowerCase() + "ActionMention", true, entity.toLowerCase(), new HashSet<String>(), newClassURI, base.URI_ActionMention);
+				//String positivePropertyClassURI = base.addClass(synset, entity.substring(0, 1).toUpperCase() + entity.substring(1).toLowerCase() + "PositiveProperty", false, entity.toLowerCase(), new HashSet<String>(), aspectPropertyClassURI, base.URI_Positive);
+				//String negativePropertyClassURI = base.addClass(synset, entity.substring(0, 1).toUpperCase() + entity.substring(1).toLowerCase() + "NegativeProperty", false, entity.toLowerCase(), new HashSet<String>(), aspectPropertyClassURI,  base.URI_Negative);
+				//String positiveActionClassURI = base.addClass(synset, entity.substring(0, 1).toUpperCase() + entity.substring(1).toLowerCase() + "PositiveAction", false, entity.toLowerCase(), new HashSet<String>(), aspectActionClassURI, base.URI_Positive);
+				//String negativeActionClassURI = base.addClass(synset, entity.substring(0, 1).toUpperCase() + entity.substring(1).toLowerCase() + "NegativeAction", false, entity.toLowerCase(), new HashSet<String>(), aspectActionClassURI, base.URI_Negative);
+				//String positiveEntityClassURI = base.addClass(synset, entity.substring(0, 1).toUpperCase() + entity.substring(1).toLowerCase() + "PositiveEntity", false, entity.toLowerCase(), new HashSet<String>(), newClassURI, base.URI_Positive);
+				//String negativeEntityClassURI = base.addClass(synset, entity.substring(0, 1).toUpperCase() + entity.substring(1).toLowerCase() + "NegativeEntity", false, entity.toLowerCase(), new HashSet<String>(), newClassURI, base.URI_Negative);
 				//this.suggestSynonyms(entity, newClassURI, aspectPropertyClassURI, aspectActionClassURI);
 			} else {
 				//this.suggestSynonyms(entity, newClassURI);
 			}
 
 			/* Create AspectMention and SentimentMention subclasses for all aspects except for general and miscellaneous. */
-			for (String aspectName : aspectTypes.keySet()) { // for each category
+			for (String aspectName : aspectTypes.keySet()) {
 				if (!aspectName.equals("general") && !aspectName.equals("miscellaneous") && !doneAspects.contains(aspectName)) {
 					doneAspects.add(aspectName);
 
 					/* Create the AspectMention class. */
 					HashSet<String> aspectsAsp = new HashSet<String>();
-					for (String entityName : aspectTypes.get(aspectName)) { // retrieve all aspects per category
-						aspectsAsp.add(entityName.toUpperCase() + "#" + aspectName.toUpperCase()); //ASPECT#CATEGORY added to aspectAsp, to be added to class as aspect-property
+					for (String entityName : aspectTypes.get(aspectName)) {
+						aspectsAsp.add(entityName.toUpperCase() + "#" + aspectName.toUpperCase());
 					}
-					//add CategoryMention class
-					String newClassURIAspect = base.addClass(aspectName.substring(0, 1).toUpperCase() + aspectName.substring(1).toLowerCase() + "Mention", true, aspectName, aspectsAsp, base.URI_EntityMention);
+					//String newClassURIAspect = base.addClass(aspectName.substring(0, 1).toUpperCase() + aspectName.substring(1).toLowerCase() + "Mention", true, aspectName, aspectsAsp, base.URI_EntityMention);
 
 					/* Create the SentimentMention classes. */
-					String aspectPropertyClassURI = base.addClass(aspectName.substring(0, 1).toUpperCase() + aspectName.substring(1).toLowerCase() + "PropertyMention", true, entity.toLowerCase(), new HashSet<String>(), newClassURIAspect, base.URI_PropertyMention);
-					String aspectActionClassURI =  base.addClass(aspectName.substring(0, 1).toUpperCase() + aspectName.substring(1).toLowerCase() + "ActionMention", true, entity.toLowerCase(), new HashSet<String>(), newClassURIAspect, base.URI_ActionMention);
-					String positivePropertyURI = base.addClass(aspectName.substring(0, 1).toUpperCase() + aspectName.substring(1).toLowerCase() + "PositiveProperty", false, aspectName.toLowerCase(), new HashSet<String>(), aspectPropertyClassURI, base.URI_Positive);
-					String negativePropertyURI = base.addClass(aspectName.substring(0, 1).toUpperCase() + aspectName.substring(1).toLowerCase() + "NegativeProperty", false, aspectName.toLowerCase(), new HashSet<String>(), aspectPropertyClassURI, base.URI_Negative);
-					String positiveActionURI = base.addClass(aspectName.substring(0, 1).toUpperCase() + aspectName.substring(1).toLowerCase() + "PositiveAction", false, aspectName.toLowerCase(), new HashSet<String>(), aspectActionClassURI, base.URI_Positive);
-					String negativeActionURI = base.addClass(aspectName.substring(0, 1).toUpperCase() + aspectName.substring(1).toLowerCase() + "NegativeAction", false, aspectName.toLowerCase(), new HashSet<String>(), aspectActionClassURI, base.URI_Negative);
-					String positiveEntityURI = base.addClass(aspectName.substring(0, 1).toUpperCase() + aspectName.substring(1).toLowerCase() + "PositiveEntity", false, aspectName.toLowerCase(), new HashSet<String>(), newClassURIAspect, base.URI_Positive);
-					String negativeEntityURI = base.addClass(aspectName.substring(0, 1).toUpperCase() + aspectName.substring(1).toLowerCase() + "NegativeEntity", false, aspectName.toLowerCase(), new HashSet<String>(), newClassURIAspect, base.URI_Negative);					
+					//String aspectPropertyClassURI = base.addClass(aspectName.substring(0, 1).toUpperCase() + aspectName.substring(1).toLowerCase() + "PropertyMention", true, entity.toLowerCase(), new HashSet<String>(), newClassURIAspect, base.URI_PropertyMention);
+					//String aspectActionClassURI =  base.addClass(aspectName.substring(0, 1).toUpperCase() + aspectName.substring(1).toLowerCase() + "ActionMention", true, entity.toLowerCase(), new HashSet<String>(), newClassURIAspect, base.URI_ActionMention);
+					//String positivePropertyURI = base.addClass(aspectName.substring(0, 1).toUpperCase() + aspectName.substring(1).toLowerCase() + "PositiveProperty", false, aspectName.toLowerCase(), new HashSet<String>(), aspectPropertyClassURI, base.URI_Positive);
+					//String negativePropertyURI = base.addClass(aspectName.substring(0, 1).toUpperCase() + aspectName.substring(1).toLowerCase() + "NegativeProperty", false, aspectName.toLowerCase(), new HashSet<String>(), aspectPropertyClassURI, base.URI_Negative);
+					//String positiveActionURI = base.addClass(aspectName.substring(0, 1).toUpperCase() + aspectName.substring(1).toLowerCase() + "PositiveAction", false, aspectName.toLowerCase(), new HashSet<String>(), aspectActionClassURI, base.URI_Positive);
+					//String negativeActionURI = base.addClass(aspectName.substring(0, 1).toUpperCase() + aspectName.substring(1).toLowerCase() + "NegativeAction", false, aspectName.toLowerCase(), new HashSet<String>(), aspectActionClassURI, base.URI_Negative);
+					//String positiveEntityURI = base.addClass(aspectName.substring(0, 1).toUpperCase() + aspectName.substring(1).toLowerCase() + "PositiveEntity", false, aspectName.toLowerCase(), new HashSet<String>(), newClassURIAspect, base.URI_Positive);
+					//String negativeEntityURI = base.addClass(aspectName.substring(0, 1).toUpperCase() + aspectName.substring(1).toLowerCase() + "NegativeEntity", false, aspectName.toLowerCase(), new HashSet<String>(), newClassURIAspect, base.URI_Negative);					
 					//this.suggestSynonyms(aspectName, newClassURIAspect, aspectPropertyClassURI, aspectActionClassURI);
 
 					if (aspectName.contains("&")) {
@@ -206,9 +214,9 @@ public class OntologyBuilder {
 						String[] parts = aspectName.split("&");
 						lexs.add(parts[0]);
 						lexs.add(parts[1]);
-						base.addLexicalizations(newClassURIAspect, lexs);
-						base.addLexicalizations(aspectPropertyClassURI, lexs);
-						base.addLexicalizations(aspectActionClassURI, lexs);
+						//base.addLexicalizations(newClassURIAspect, lexs);
+						//base.addLexicalizations(aspectPropertyClassURI, lexs);
+						//base.addLexicalizations(aspectActionClassURI, lexs);
 						//this.suggestSynonyms(parts[0], newClassURIAspect, aspectPropertyClassURI, aspectActionClassURI);
 						//this.suggestSynonyms(parts[1], newClassURIAspect, aspectPropertyClassURI, aspectActionClassURI);
 					}
@@ -217,9 +225,9 @@ public class OntologyBuilder {
 						String[] parts = aspectName.split("_");
 						lexs.add(parts[0]);
 						lexs.add(parts[1]);
-						base.addLexicalizations(newClassURIAspect, lexs);
-						base.addLexicalizations(aspectPropertyClassURI, lexs);
-						base.addLexicalizations(aspectActionClassURI, lexs);
+						//base.addLexicalizations(newClassURIAspect, lexs);
+						//base.addLexicalizations(aspectPropertyClassURI, lexs);
+						//base.addLexicalizations(aspectActionClassURI, lexs);
 						//this.suggestSynonyms(parts[0], newClassURIAspect, aspectPropertyClassURI, aspectActionClassURI);
 						//this.suggestSynonyms(parts[1], newClassURIAspect, aspectPropertyClassURI, aspectActionClassURI);
 					}
@@ -229,36 +237,36 @@ public class OntologyBuilder {
 
 		//add Food and DrinksMention to Sustenance Class
 
-		String FoodMentionClassURI = base.addClass("food#noun#1", "FoodMention",true, "food", aspectCat.get("sustenance"), base.NS + "#SustenanceMention");
-		String FoodMentionActionClassURI = base.addClass("food#noun#1", "FoodActionMention",true, "food", aspectCat.get("sustenance"), base.NS + "#SustenanceActionMention");
-		String FoodMentionPropertyClassURI = base.addClass("food#noun#1",  "FoodPropertyMention", true, "food", aspectCat.get("sustenance"), base.NS + "#SustenancePropertyMention");
+		//String FoodMentionClassURI = base.addClass("food#noun#1", "FoodMention",true, "food", aspectCat.get("sustenance"), base.NS + "#SustenanceMention");
+		//String FoodMentionActionClassURI = base.addClass("food#noun#1", "FoodActionMention",true, "food", aspectCat.get("sustenance"), base.NS + "#SustenanceActionMention");
+		//String FoodMentionPropertyClassURI = base.addClass("food#noun#1",  "FoodPropertyMention", true, "food", aspectCat.get("sustenance"), base.NS + "#SustenancePropertyMention");
 	//	this.suggestSynonyms("food", FoodMentionClassURI, FoodMentionActionClassURI, FoodMentionPropertyClassURI);
-		String DrinksMentionClassURI = base.addClass("drinks#noun#1", "DrinksMention", true, "drinks", aspectCat.get("sustenance"), base.NS + "#SustenanceMention");
-		String DrinksMentionActionClassURI = base.addClass("drinks#noun#1", "DrinksActionMention", true, "drinks", aspectCat.get("sustenance"), base.NS + "#SustenanceActionMention");
-		String DrinksMentionPropertyClassURI = base.addClass("drinks#noun#1", "DrinksPropertyMention", true, "drinks", aspectCat.get("sustenance"), base.NS + "#SustenancePropertyMention");
+	//	String DrinksMentionClassURI = base.addClass("drinks#noun#1", "DrinksMention", true, "drinks", aspectCat.get("sustenance"), base.NS + "#SustenanceMention");
+	//	String DrinksMentionActionClassURI = base.addClass("drinks#noun#1", "DrinksActionMention", true, "drinks", aspectCat.get("sustenance"), base.NS + "#SustenanceActionMention");
+	//	String DrinksMentionPropertyClassURI = base.addClass("drinks#noun#1", "DrinksPropertyMention", true, "drinks", aspectCat.get("sustenance"), base.NS + "#SustenancePropertyMention");
 	//	this.suggestSynonyms("drinks", DrinksMentionClassURI, DrinksMentionActionClassURI, DrinksMentionPropertyClassURI);
 
 		//add a few extra EntityMention classes
 		//ExperienceMention
-		HashSet<String> experienceAspects = new HashSet<String>();
-		experienceAspects.add("RESTAURANT#MISCELLANEOUS");
-		String ExperienceMentionClassURI = base.addClass("experience#noun#3", "Experience" + "Mention", true, "experience", experienceAspects, base.URI_EntityMention);
-		String ExperienceMentionActionClassURI = base.addClass("experience#noun#3", "Experience" + "ActionMention", true, "experience", experienceAspects, base.URI_ActionMention);
-		String ExperienceMentionPropertyClassURI = base.addClass("experience#noun#3", "Experience" + "PropertyMention", true, "experience", experienceAspects, base.URI_PropertyMention);
+		//HashSet<String> experienceAspects = new HashSet<String>();
+		//experienceAspects.add("RESTAURANT#MISCELLANEOUS");
+		//String ExperienceMentionClassURI = base.addClass("experience#noun#3", "Experience" + "Mention", true, "experience", experienceAspects, base.URI_EntityMention);
+		//String ExperienceMentionActionClassURI = base.addClass("experience#noun#3", "Experience" + "ActionMention", true, "experience", experienceAspects, base.URI_ActionMention);
+	//	String ExperienceMentionPropertyClassURI = base.addClass("experience#noun#3", "Experience" + "PropertyMention", true, "experience", experienceAspects, base.URI_PropertyMention);
 	//	this.suggestSynonyms("experience", ExperienceMentionClassURI, ExperienceMentionActionClassURI, ExperienceMentionPropertyClassURI);
 		
 		//PersonMention
-		HashSet<String> personAspects = new HashSet<String>();
-		String PersonMentionClassURI = base.addClass("person#noun#1", "Person" + "Mention", true, "person", personAspects, base.URI_EntityMention);
-		String PersonMentionActionClassURI = base.addClass("person#noun#1", "Person" + "ActionMention", true, "person", personAspects, base.URI_ActionMention);
-		String PersonMentionPropertyClassURI = base.addClass("person#noun#1", "Person" + "PropertyMention", true, "person", personAspects, base.URI_PropertyMention);
+		//HashSet<String> personAspects = new HashSet<String>();
+		//String PersonMentionClassURI = base.addClass("person#noun#1", "Person" + "Mention", true, "person", personAspects, base.URI_EntityMention);
+		//String PersonMentionActionClassURI = base.addClass("person#noun#1", "Person" + "ActionMention", true, "person", personAspects, base.URI_ActionMention);
+		//String PersonMentionPropertyClassURI = base.addClass("person#noun#1", "Person" + "PropertyMention", true, "person", personAspects, base.URI_PropertyMention);
 		//this.suggestSynonyms("person", PersonMentionClassURI, PersonMentionActionClassURI, PersonMentionPropertyClassURI);
 		
 		//TimeMention
-		HashSet<String> timeAspects = new HashSet<String>();
-		String TimeMentionClassURI = base.addClass("time#noun#2", "Time" + "Mention", true, "time", timeAspects, base.URI_EntityMention);
-		String TimeMentionActionClassURI = base.addClass("time#noun#2", "Time" + "ActionMention", true, "time", timeAspects, base.URI_ActionMention);
-		String TimeMentionPropertyClassURI = base.addClass("time#noun#2", "Time" + "PropertyMention", true, "time", timeAspects, base.URI_PropertyMention);
+	//	HashSet<String> timeAspects = new HashSet<String>();
+	//	String TimeMentionClassURI = base.addClass("time#noun#2", "Time" + "Mention", true, "time", timeAspects, base.URI_EntityMention);
+	///	String TimeMentionActionClassURI = base.addClass("time#noun#2", "Time" + "ActionMention", true, "time", timeAspects, base.URI_ActionMention);
+	///	String TimeMentionPropertyClassURI = base.addClass("time#noun#2", "Time" + "PropertyMention", true, "time", timeAspects, base.URI_PropertyMention);
 	//	this.suggestSynonyms("time", TimeMentionClassURI, TimeMentionActionClassURI, TimeMentionPropertyClassURI);
 	}
 
@@ -1523,7 +1531,7 @@ public class OntologyBuilder {
 
 			/* Dependent on the score put the more likely sentiment classes first  */
 			/* Give priority to the sentiment suggested by score. */
-			//if (sentimentScore > 0.025) { // TODOï¼š check 0.025!!
+			//if (sentimentScore > 0.025) { // TODOÃ¯Â¼Å¡ check 0.025!!
 		//		for (String URI : parents.keySet()) {
 		//			double parentScore = parents.get(URI);
 		//			if (URI.contains("Positive")) {

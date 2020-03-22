@@ -24,9 +24,10 @@ public class MainOntoBuild {
 
 		/* Start with the skeletal ontology. */
 		SeminarOntology base = new SeminarOntology(Framework.EXTERNALDATA_PATH + "RestaurantOntologyThesisBase2018.owl");
-		//ThesisOntology base = new ThesisOntology(Framework.EXTERNALDATA_PATH + "RestaurantOntologyThesisBase.owl");
+		//ThesisOntology base = new ThesisOntology(Framework.EXTERNALDATA_PATH + "RestaurantOntologyThesisBase.owl");		
 		HashMap<String, HashSet<String>> aspectCategories = new HashMap<String, HashSet<String>>();
-
+		
+		/*create HashMap aspectCategories that maps each aspect to its relevant categories */
 		HashSet<String> restaurant = new HashSet<String>();
 		restaurant.add("general");
 		restaurant.add("prices");
